@@ -28,6 +28,7 @@
 
     let hitCount = document.querySelector('.hit-title');
     let missCount = document.querySelector('.miss-title');
+    let reloadIcon = document.querySelector('.reloadIcon');
 
      // VARIABLE
 
@@ -71,6 +72,10 @@
     // item.addEventListener("pressHold", doSomething, false);
     
 
+
+
+// function main
+        
     item1.onclick = () => {
         item1.style.opacity = "1";
         item2.style.opacity = "0.1";
@@ -94,7 +99,7 @@
         progSection.style.opacity = "1";
         titleInfo.innerHTML = "Ustal siłe strzału!";
     };
-    
+
 
     item3.onclick = () => {
 
@@ -136,7 +141,7 @@
         titleInfo.innerHTML = "Ustal siłe strzału!";
 
     };
-    
+
     item6.onclick = () => {
 
         item6.style.opacity = "1";
@@ -151,10 +156,12 @@
 
     };
 
-    // Stack code
-// function main{
-    
-
+    reloadIcon.onclick = () => {
+        shotHit = 0;
+        shotMiss = 0;
+        hitCount.innerHTML = shotHit;
+        missCount.innerHTML = shotMiss;
+    };
 
     function pressingDown(e) {
       // Start the timer
@@ -527,7 +534,6 @@ function removeEvent(){
     item.removeEventListener("touchstart", pressingDown, false);
     item.removeEventListener("touchend", notPressingDown, false);
 
-    
     progSection.style.opacity = "0";
 
     tryagainSection.style.transform = "translateY(0%)";
@@ -547,8 +553,6 @@ function addEvent(){
 
     tryagainSection.style.transform = "translateY(-100%)";
 
-    // titleInfo.innerHTML = "Wybierz pole i przytrzymaj aby ustalić siłę strzału!";
-
     item1.style.opacity = "1";
     item2.style.opacity = "1";
     item3.style.opacity = "1";
@@ -565,9 +569,9 @@ function changeBackgroundToFirst(){
 }
 
 function changeBackgroundToSecond(){
-
     document.body.style.backgroundImage = "url('img/bramka3.png')";
     document.body.style.backgroundPositionY = "-14px";
     titleSite.style.color = "black";
-
 }
+
+

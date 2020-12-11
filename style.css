@@ -255,6 +255,7 @@ body {
 }
 
 .scoreCount {
+  position: relative;
   margin-left: 10px;
   width: fit-content;
   padding: 15px;
@@ -290,6 +291,20 @@ body {
 .background-change img:hover {
   transform: scale(1.05);
   filter: brightness(1.3);
+}
+
+.reloadIcon {
+  position: absolute;
+  width: 20px;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  transition: 0.5s ease transform;
+  cursor: pointer;
+}
+
+.reloadIcon:hover {
+  transform: rotate(-100deg);
 }
 
 /* @media (max-width: 900px) {
