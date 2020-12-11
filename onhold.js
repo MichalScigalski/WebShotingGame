@@ -558,7 +558,7 @@ function addEvent(){
 }
 
 function changeBackgroundToFirst(){
-    document.body.style.backgroundImage = "url('bramka1.png')";
+    document.body.style.backgroundImage = "url('img/bramka1.png')";
     document.body.style.backgroundPositionY = "-194px";
     titleSite.style.color = "white";
 
@@ -566,7 +566,7 @@ function changeBackgroundToFirst(){
 
 function changeBackgroundToSecond(){
 
-    document.body.style.backgroundImage = "url('bramka3.png')";
+    document.body.style.backgroundImage = "url('img/bramka3.png')";
     document.body.style.backgroundPositionY = "-14px";
     titleSite.style.color = "black";
 

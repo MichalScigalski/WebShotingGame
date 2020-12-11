@@ -8,7 +8,7 @@ body {
   background-position-y: -194px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(bramka1.png);
+  background-image: url(img/bramka1.png);
   margin: 0;
   scroll-behavior: smooth;
   overflow-y: scroll;
