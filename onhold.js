@@ -8,6 +8,7 @@
     let item5 = document.querySelector('.item5');
     let item6 = document.querySelector('.item6');
 
+
     let progSection = document.querySelector('.progress-section');
 
     let btnagain = document.querySelector('.btn-again-2');
@@ -32,6 +33,8 @@
 
      // VARIABLE
 
+    const ball = document.querySelector('.ball');
+
     var debug;
     let timerID;
     let counter = 0;
@@ -41,6 +44,8 @@
     let shotMiss = 0;
     let shotHitStreak = 0;
 
+    let isGool;
+    let isInto;
 
     let powerBarInPut;
     let numberField;
@@ -226,6 +231,11 @@ function softShotOne(){
     // console.log(random1);
 
     if(random1 < 3){
+
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false; 
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         shotHit++;
@@ -233,6 +243,11 @@ function softShotOne(){
         hitCount.innerHTML = shotHit;
     }
     else{
+
+        // zmienne do animacji strzału
+        isGool = false;
+        isInto = false;
+
         console.log("NIEE!");
         btnagain1.innerHTML = `OBRONIONO`;
         removeEvent();
@@ -243,6 +258,10 @@ function softShotOne(){
 }
 
 function softShotTwo(){
+    // zmienne do animacji strzału
+    isGool = false;
+    isInto = false;
+
     console.log("NIEE!")
     btnagain1.innerHTML = `OBRONIONO`;
     removeEvent();
@@ -256,18 +275,26 @@ function softShotThree(){
     let random2 = Math.floor(Math.random() * 10);
 
     if(random1 <= 3 && random2 <= 3 ){
+        isGool = true;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
         shotHit++;
         hitCount.innerHTML = shotHit;
+
     }
     else{
+        // zmienne do animacji strzału
+        isGool = false;
+        isInto = true;
+
         console.log("NIEE!");
-        btnagain1.innerHTML = `OBRIONIONO`;
+        btnagain1.innerHTML = `OBRONIONO`;
         removeEvent();
         shotMiss++;
         missCount.innerHTML = shotMiss;
+
 
 
         //obroniono
@@ -281,21 +308,27 @@ function mediumShotOne(){
     let random2 = Math.floor(Math.random() * 10);
 
     if(random1 <= 8 && random2 <= 5 ){
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
         shotHit++;
         hitCount.innerHTML = shotHit;
 
-
-
     }else{
+
+        // zmienne do animacji strzału
+        isGool = false;
+        isInto = false
+
         console.log("NIEE!");
-        btnagain1.innerHTML = `OBRIONIONO`;
+        btnagain1.innerHTML = `OBRONIONO`;
         removeEvent();
         shotMiss++;
         missCount.innerHTML = shotMiss;
-
 
         //obroniono
     }
@@ -304,13 +337,12 @@ function mediumShotOne(){
 function mediumShotTwo(){
     let random1 = Math.floor(Math.random() * 10);
     let random2 = Math.floor(Math.random() * 10);
-
-    //test
-    // console.log(random1);
-    // console.log(random2);
-
     
     if(random1 <= 4 && random2 <= 9 ){
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
@@ -319,14 +351,18 @@ function mediumShotTwo(){
 
 
 
-
     }else{
+
+        // zmienne do animacji strzału
+        isGool = false;
+        isInto = true;
+
+
         console.log("NIEE!");
         btnagain1.innerHTML = `OBRONIONO`;
         removeEvent();
         shotMiss++;
         missCount.innerHTML = shotMiss;
-
 
         //obroniono
     }
@@ -340,6 +376,10 @@ function mediumShotThree(){
     let random2 = Math.floor(Math.random() * 10);
 
     if(random1 <= 5 && random2 <= 5 ){
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
@@ -350,8 +390,12 @@ function mediumShotThree(){
 
 
     }else{
+        // zmienne do animacji strzału
+        isGool = false;
+        isInto = false;
+
         console.log("NIEE!");
-        btnagain1.innerHTML = `OBRIONIONO`;
+        btnagain1.innerHTML = `OBRONIONO`;
         removeEvent();
         shotMiss++;
         missCount.innerHTML = shotMiss;
@@ -370,18 +414,30 @@ function strongShotOne(){
 
 
     if(random1 <= 2 && random2 <= 8 ){
+
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
         shotHit++;
         hitCount.innerHTML = shotHit;
+
     }
     else{
+
+        // zmienne do animacji strzału
+        isGool = null;
+        isInto = true;
+
         console.log("NIEE!");
         btnagain1.innerHTML = `PUDŁO`;
         removeEvent();
         shotMiss++;
         missCount.innerHTML = shotMiss;
+        
     }
 }
 
@@ -392,13 +448,23 @@ function strongShotTwo(){
 
 
     if(random1 <= 1 && random2 <= 10 ){
+
+         // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
         shotHit++;
         hitCount.innerHTML = shotHit;
+
     }
     else{
+        // zmienne do animacji strzału
+        isGool = null;
+        isInto = true;
+
         console.log("NIEE!");
         btnagain1.innerHTML = `PUDŁO`;
         removeEvent();
@@ -413,19 +479,29 @@ function strongShotThree(){
     let random2 = Math.floor(Math.random() * 10);
 
     if(random1 <= 6 && random2 <= 6 ){
+
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("goll!!");
         btnagain1.innerHTML = `GOOL!`;
         removeEvent();
         shotHit++;
         hitCount.innerHTML = shotHit;
+
     }
     else{
+
+        // zmienne do animacji strzału
+        isGool = true;
+        isInto = false;
+
         console.log("NIEE!");
-        btnagain1.innerHTML = `OBRIONIONO`;
+        btnagain1.innerHTML = `OBRONIONO`;
         removeEvent();
         shotMiss++;
         missCount.innerHTML = shotMiss;
-
         //obroniono
     }
 }
@@ -472,7 +548,7 @@ function strong(){
 
     if(201 <= powerBarInPut && 300 >= powerBarInPut ){
 
-        powerBar    = 3;
+        powerBar = 3;
         // console.log("if-2");
     }
     console.log("powerBarInPut:");
@@ -524,10 +600,10 @@ function strong(){
 // }
 }
 
-
-
+// funkcja strzału do bramki
 
 function removeEvent(){ 
+    
     item.removeEventListener("mousedown", pressingDown, false);
     item.removeEventListener("mouseup", notPressingDown, false);
     // item.removeEventListener("mouseleave", notPressingDown, false);
@@ -536,11 +612,115 @@ function removeEvent(){
 
     progSection.style.opacity = "0";
 
+
+    if(numberField == 1){
+        if(isInto == true){
+            ball.style.transform = "translate(-280%, -1220%) rotate(1300deg)";
+        }
+        
+        if(isGool == true){
+            ball.style.zIndex = "-2"; // obronione / gool
+            ball.style.transform = "translate(-280%, -520%) rotate(300deg)";
+
+        }
+
+        if(isGool == false){
+            ball.style.zIndex = "2"; // obronione / gool
+            ball.style.transform = "translate(-280%, -520%) rotate(300deg)";
+
+        }
+    }
+
+    if(numberField == 2){
+        if(isInto == true){
+            ball.style.transform = "translate(80%, -1220%) rotate(1300deg)";
+        }
+
+        if(isGool==true){
+            ball.style.zIndex = "-2"; // obronione / gool
+            ball.style.transform = "translate(-10%, -500%) rotate(40deg)";
+
+        }
+        if(isGool == false){
+            ball.style.zIndex = "2"; // obronione / gool
+            ball.style.transform = "translate(-10%, -500%) rotate(40deg)";
+        }
+    }
+
+    if(numberField == 3){
+        if(isInto == true){
+            ball.style.transform = "translate(580%, -1220%) rotate(1300deg)";
+        }
+
+        if(isGool==true){
+            ball.style.zIndex = "-2"; // obronione / gool
+            ball.style.transform = "translate(280%,-500%) rotate(-480deg)";
+
+        }
+        if(isGool == false){
+            ball.style.zIndex = "2"; // obronione / gool
+            ball.style.transform = "translate(280%,-500%) rotate(-480deg)";
+        }
+    }
+
+    if(numberField == 4){
+        if(isInto == true){
+            ball.style.transform = "translate(-980%, -280%) rotate(-1300deg)";
+        }
+
+        if(isGool==true){
+            ball.style.zIndex = "-2"; // obronione / gool
+            ball.style.transform = "translate(-280%,-220%) rotate(230deg)";
+
+        }
+        if(isGool == false){
+            ball.style.zIndex = "2"; // obronione / gool
+            ball.style.transform = "translate(-280%,-220%) rotate(230deg)";
+
+        }
+    }
+
+    if(numberField == 5){
+        if(isGool==true){
+            ball.style.zIndex = "-2"; // obronione / gool
+        }
+        else{
+            ball.style.zIndex = "2"; // obronione / gool
+        }
+        ball.style.transform = "translate(-10%,-250%) rotate(80deg)";
+    }
+
+    if(numberField == 6){
+        if(isInto == true){
+            ball.style.transform = "translate(980%, -280%) rotate(1300deg)";
+        }
+
+        if(isGool==true){
+            ball.style.zIndex = "-2"; // obronione / gool
+            ball.style.transform = "translate(280%,-200%) rotate(80deg)";
+
+        }
+
+        if(isGool == false){
+            ball.style.zIndex = "2"; // obronione / gool
+            ball.style.transform = "translate(280%,-200%) rotate(80deg)";
+        }
+    }
+
+
+
+    setTimeout(Slider, 800)
+
+}
+
+function Slider(){
     tryagainSection.style.transform = "translateY(0%)";
 
 }
 
+// restart do stanu początkowego / zagraj ponownie
 function addEvent(){
+
     item.addEventListener("mousedown", pressingDown, false);
     item.addEventListener("mouseup", notPressingDown, false);
     // item.addEventListener("mouseleave", notPressingDown, false);
@@ -549,7 +729,12 @@ function addEvent(){
 
     console.log(numberField);
 
+    ball.style.transform= "translate(10%, 0%)";
     titleInfo.innerHTML = "Wybierz pole strzału!";
+
+    
+    //restartowanie połozienia piłki według warstw 
+    ball.style.zIndex = "2";
 
     tryagainSection.style.transform = "translateY(-100%)";
 
@@ -563,14 +748,14 @@ function addEvent(){
 
 function changeBackgroundToFirst(){
     document.body.style.backgroundImage = "url('img/bramka1.png')";
-    document.body.style.backgroundPositionY = "-194px";
+    document.body.style.backgroundPositionY = "-244px";
     titleSite.style.color = "white";
 
 }
 
 function changeBackgroundToSecond(){
     document.body.style.backgroundImage = "url('img/bramka3.png')";
-    document.body.style.backgroundPositionY = "-14px";
+    document.body.style.backgroundPositionY = "-100px";
     titleSite.style.color = "black";
 }
 

@@ -5,14 +5,33 @@ body {
   /* background-image: url(goal-box.svg);
   background-position: center;
   background-repeat: no-repeat;*/
-  background-position-y: -194px;
+  background-position-y: -100px;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url(img/bramka1.png);
+  background-image: url(img/bramka3.png);
   margin: 0;
   scroll-behavior: smooth;
   overflow-y: scroll;
   transition: 1s ease background;
+}
+
+.all {
+  margin-top: -90px;
+}
+
+.ball-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.ball {
+  width: 100px;
+  height: auto;
+  transform: translate(10%, 0%);
+  transition: 0.8s all ease;
 }
 
 .container {
@@ -98,6 +117,7 @@ body {
   -webkit-box-shadow: 5px 4px 20px -5px rgba(0, 0, 0, 0.64);
   -moz-box-shadow: 5px 4px 20px -5px rgba(0, 0, 0, 0.64);
   box-shadow: 5px 4px 20px -5px rgba(0, 0, 0, 0.64);
+  z-index: -3;
 }
 
 .gate {
@@ -225,6 +245,7 @@ body {
 }
 
 .tryagain-section {
+  margin-top: 90px;
   transition: 1s ease all;
   z-index: 3;
   position: absolute;
