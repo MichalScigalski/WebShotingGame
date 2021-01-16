@@ -30,7 +30,7 @@ body {
 .ball {
   width: 100px;
   height: auto;
-  transform: translate(10%, 0%);
+  transform: translate(-1000%, 0%);
   transition: 0.8s all ease;
 }
 

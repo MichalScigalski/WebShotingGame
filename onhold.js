@@ -718,6 +718,10 @@ function Slider(){
 
 }
 
+function ballOnLoad(){
+    ball.style.transform= "translate(10%, 0%) rotate(450deg)";
+}
+
 // restart do stanu początkowego / zagraj ponownie
 function addEvent(){
 
@@ -760,3 +764,5 @@ function changeBackgroundToSecond(){
 }
 
 
+//
+ballOnLoad();
